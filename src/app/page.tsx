@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { HeaderMenu } from "./components/HeaderMenu";
 import {
@@ -10,14 +11,16 @@ import {
   Center,
   Card,
 } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 
 export default function Home() {
+  const matches = useMediaQuery('(min-width: 2560px)');
   return (
     <>
       <HeaderMenu />
 
-      <Container size="90%">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <Container size={matches ? "60%" : "xl"} mt={matches ? "100px" : "50px"}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div>
             <Text
               c="black"
@@ -123,6 +126,8 @@ export default function Home() {
             </Group>
           </div>
           <div>
+            <Center>
+
             <Image
               src="/images/image_1.png"
               alt="Image"
@@ -130,6 +135,7 @@ export default function Home() {
               height={638}
               style={{ width: "auto", height: "638.13px" }}
             />
+            </Center>
           </div>
         </div>
         <Space h={"100px"} />
@@ -181,10 +187,13 @@ export default function Home() {
             <Text fz={23} fw={600} mt="md" ta={"center"}>
               Proven Expertise
             </Text>
-            <Text fz={18} c="#535862" mt="sm" ta={"center"}>
+            <Center>
+            <Text fz={18} c="#535862" mt="sm" ta={"center"} maw={400}>
               Over two decades of engineering excellence across complex
               infrastructure projects.
             </Text>
+            </Center>
+
           </div>
 
           <div>
@@ -203,10 +212,12 @@ export default function Home() {
             <Text fz={23} fw={600} mt="md" ta={"center"}>
               Comprehensive Solutions
             </Text>
-            <Text fz={18} c="#535862" mt="sm" ta={"center"}>
+            <Center>
+            <Text fz={18} c="#535862" mt="sm" ta={"center"} maw={400}>
               From concept to completion, we provide end-to-end engineering
               consulting services.
             </Text>
+            </Center>
           </div>
           <div>
             <Center>
@@ -224,10 +235,12 @@ export default function Home() {
             <Text fz={23} fw={600} mt="md" ta={"center"}>
               Innovation Driven
             </Text>
-            <Text fz={18} c="#535862" mt="sm" ta={"center"}>
+            <Center>
+            <Text fz={18} c="#535862" mt="sm" ta={"center"} maw={400}>
               Leveraging cutting-edge technology and industry best practices for
               optimal results.
             </Text>
+            </Center>
           </div>
         </SimpleGrid>
         <Space h={"100px"} />
@@ -239,7 +252,7 @@ export default function Home() {
         {/* <Space h={"md"} /> */}
         <Center>
           <Text ta={"center"} fw={400} fz={23} c={"#535862"} maw={850}>
-            Our expertise spans across critical energy and infrastructure sectors, delivering specialized solutions for each industry's unique challenges.
+            Our expertise spans across critical energy and infrastructure sectors, delivering specialized solutions for each industry&apos;s unique challenges.
           </Text>
         </Center>
         <Space h={"100px"} />
@@ -373,13 +386,13 @@ export default function Home() {
         <div style={{ backgroundColor: "#FC6111", maxHeight:"400px", width:"100%"}}>
           <Space h={"100px"} />
 
-          <Text ta={"center"} fw={700} fz={36} c={"white"} style={{fontFamily:"Satoshi"}}>
+          <Text ta={"center"} fw={700} fz={36} c={"white"} style={{fontFamily:"satoshi"}}>
             Ready to Start Your Next Project?
           </Text>
           {/* <Space h={"md"} /> */}
           <Center>
-            <Text ta={"center"} fw={400} fz={20} c={"white"} maw={700} style={{fontFamily:"Satoshi"}}>
-              Let's discuss how MOKKO can help you achieve your engineering goals with our expertise and innovative solutions.
+            <Text ta={"center"} fw={400} fz={20} c={"white"} maw={700} style={{fontFamily:"satoshi"}}>
+              Let&apos;s discuss how MOKKO can help you achieve your engineering goals with our expertise and innovative solutions.
             </Text>
           </Center>
           <Space h={"50px"} />

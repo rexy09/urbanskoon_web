@@ -1,17 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { createTheme, mantineHtmlProps, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import FooterLinks from "./components/FooterLinks";
 
 export const metadata: Metadata = {
   title: "Mokko",
@@ -25,6 +16,13 @@ export default function RootLayout({
 }>) {
   const theme = createTheme({
     fontFamily: "Inter",
+    // breakpoints: {
+    //   xs: '30em',
+    //   sm: '48em',
+    //   md: '64em',
+    //   lg: '74em',
+    //   xl: '90em',
+    // },
   });
   return (
     <html lang="en" {...mantineHtmlProps}>
@@ -41,10 +39,12 @@ export default function RootLayout({
         />
         <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet" />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+      <body>
+        <MantineProvider theme={theme}>
+          {children}
+          <FooterLinks />
+          {/* <HeaderMenu /> */}
+        </MantineProvider>
       </body>
     </html>
   );
