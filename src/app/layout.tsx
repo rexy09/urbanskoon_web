@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { createTheme, mantineHtmlProps, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
-import FooterLinks from "./components/FooterLinks";
+import FooterLinks from "../components/FooterLinks";
+import { HeaderMenu } from "@/components/HeaderMenu";
 
 export const metadata: Metadata = {
   title: "Mokko",
   description: "Engineering Excellence for Energy Infrastructure",
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -41,6 +41,7 @@ export default function RootLayout({
       </head>
       <body>
         <MantineProvider theme={theme}>
+          <HeaderMenu />
           {children}
           <FooterLinks />
           {/* <HeaderMenu /> */}

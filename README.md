@@ -34,3 +34,41 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Project Structure
+my-next-app/
+│
+├── public/                   # Static assets (images, fonts, etc.)
+├── src/                      # All source code lives here
+│   ├── components/           # Reusable UI components
+│   │   └── ui/               # Generic UI elements (buttons, inputs, etc.)
+│   │
+│   ├── features/             # Feature-based modules (domain-specific)
+│   │   └── auth/             # Example: Authentication feature
+│   │       ├── components/   # Auth-related components
+│   │       ├── hooks/        # Auth-specific hooks
+│   │       ├── services/     # Services for auth API
+│   │       ├── types/        # Auth-related TypeScript types
+│   │       └── utils/        # Feature-specific utilities
+│   │
+│   ├── hooks/                # Global/custom React hooks
+│   ├── lib/                  # App-wide libraries (API clients, date utils)
+│   │   └── axios.ts          # Axios instance or API client config
+│   │
+│   ├── pages/                # Next.js pages (routes)
+│   │   ├── api/              # API routes (if using Next.js API)
+│   │   └── index.tsx         # Homepage
+│   │
+│   ├── services/             # Cross-feature service calls (shared API logic)
+│   │   └── userService.ts    # Example user-related API calls
+│   │
+│   ├── store/                # State management (e.g., Redux or Zustand)
+│   ├── styles/               # Global and modular styles
+│   ├── types/                # Global TypeScript types and interfaces
+│   │   └── user.ts           # Example: Global user type
+│   └── utils/                # General utility functions
+│
+├── .env.local                # Environment variables
+├── next.config.js            # Next.js config
+├── tsconfig.json             # TypeScript config
+└── package.json
