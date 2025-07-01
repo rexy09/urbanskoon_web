@@ -11,6 +11,7 @@ import {
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export function HeaderMenu() {
@@ -31,7 +32,7 @@ export function HeaderMenu() {
     <Container fluid p={"lg"}>
       <header className={''}>
         <Group justify="space-between" h="100%">
-          <a href="/" >
+          <Link href="/" >
             <Group>
 
               <Image
@@ -45,13 +46,13 @@ export function HeaderMenu() {
                 fontFamily: "DM Sans"
               }}>Mokko</Text>
             </Group>
-          </a>
+          </Link>
 
           <Group h="100%" gap={0} visibleFrom="sm">
 
 
             {links.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className={`font-medium text-[16px] text-[#1A191E] mx-2 px-3 py-2 rounded transition-colors ${pathname === link.href ? "bg-[#F8F8F8]" : ""
@@ -61,7 +62,7 @@ export function HeaderMenu() {
                 }}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
 
           </Group>
@@ -83,7 +84,7 @@ export function HeaderMenu() {
         onClose={closeDrawer}
         size="100%"
         padding="md"
-        title={<a href="/" >
+        title={<Link href="/" >
           <Group>
 
             <Image
@@ -97,7 +98,7 @@ export function HeaderMenu() {
               fontFamily: "DM Sans"
             }}>Mokko</Text>
           </Group>
-        </a>}
+        </Link>}
         hiddenFrom="sm"
         zIndex={1000000}
       >

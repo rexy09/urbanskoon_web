@@ -7,17 +7,16 @@ import {
   Center,
   Container,
   Group,
-  Paper,
   SimpleGrid,
   Space,
   Stack,
-  Text,
+  Text
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import Image from "next/image";
 
 function AboutUs() {
-  const matches = useMediaQuery("(min-width: 2560px)");
+  // const matches = useMediaQuery("(min-width: 2560px)");
   const matches2 = useMediaQuery("(min-width: 1024px)");
 
   return (

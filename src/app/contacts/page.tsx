@@ -1,20 +1,13 @@
 "use client";
 import ContactUsSection from "@/components/ContactUsSection";
-import ReadyToStart from "@/components/ReadyToStart";
 import {
-  Box,
   Button,
-  Card,
   Center,
   Container,
-  Group,
-  Paper,
-  SimpleGrid,
   Space,
-  Stack,
   Text,
   Textarea,
-  TextInput,
+  TextInput
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import Image from "next/image";
