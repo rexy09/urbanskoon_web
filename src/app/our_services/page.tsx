@@ -202,11 +202,11 @@ function Services() {
                 ta={"center"}
                 style={{ fontFamily: "Satoshi" }}
               >
-                Design
+                Engineering Design
               </Text>
               <Center>
                 <Text fz={18} mt="sm" ta={"center"} maw={400}>
-                  Concept to Detail
+                  Conceptual to Detailed Design
                 </Text>
               </Center>
             </div>

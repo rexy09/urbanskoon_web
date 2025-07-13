@@ -61,7 +61,7 @@ export default function Home() {
             <Space h="xl" />
             <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
               {[
-                "20+ Years of Engineering Excellence",
+                "Years of Engineering Excellence",
                 "Multi-Disciplinary Expert Team",
                 "Proven Track Record Across Africa",
                 "Cutting-Edge Technology Solutions",
@@ -217,11 +217,10 @@ export default function Home() {
         </SimpleGrid>
         <Space h={"100px"} />
       </Container>
-      <Container size="lg">
+      {/* <Container size="lg">
         <Text ta={"center"} fw={600} fz={42}>
           Industries We Serve
         </Text>
-        {/* <Space h={"md"} /> */}
         <Center>
           <Text ta={"center"} fw={400} fz={23} c={"#535862"} maw={850}>
             Our expertise spans across critical energy and infrastructure
@@ -416,7 +415,7 @@ export default function Home() {
             </Group>
           </Card>
         </SimpleGrid>
-      </Container>
+      </Container> */}
 
       <Space h={"100px"} />
       <ReadyToStart />
