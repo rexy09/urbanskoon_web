@@ -38,9 +38,7 @@ export default function Home() {
                 c="white"
                 fw={700}
                 fz={matches2 ? "64px" : "40px"}
-                style={{
-                  fontFamily: "Satoshi",
-                }}
+               
               >
                 Quality car service
               </Text>
@@ -48,9 +46,7 @@ export default function Home() {
                 c="white"
                 fw={700}
                 fz={matches2 ? "64px" : "40px"}
-                style={{
-                  fontFamily: "Satoshi",
-                }}
+               
               >
                 you can trust.
               </Text>

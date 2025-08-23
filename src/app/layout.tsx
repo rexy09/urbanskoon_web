@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const theme = createTheme({
-    fontFamily: "Inter",
+    fontFamily: "Clan Pro, sans-serif",
     // breakpoints: {
     //   xs: '30em',
     //   sm: '48em',
@@ -25,17 +25,8 @@ export default function RootLayout({
   return (
     <html lang="en" {...mantineHtmlProps}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-          rel="stylesheet"
-        />
-        <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet" />
+        <link href="https://fonts.cdnfonts.com/css/clan-pro" rel="stylesheet"/>
+
       </head>
       <body>
         <MantineProvider theme={theme}>
