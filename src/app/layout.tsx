@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Mokko",
-  description: "Engineering Excellence for Energy Infrastructure",
+  title: "UrbanSkoon - Quality Car Service You Can Trust",
+  description: "Premium car care delivered with speed, precision, and attention to detail. Spotless vehicle wash guaranteed in 30 minutes or less.",
 };
 export default function RootLayout({
   children,
