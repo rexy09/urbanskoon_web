@@ -34,20 +34,10 @@ export default function Home() {
           <Container size="xl">
             <HeaderMenu />
             <Stack justify="flex-end" h="600" gap="0">
-              <Text
-                c="white"
-                fw={700}
-                fz={matches2 ? "64px" : "40px"}
-               
-              >
+              <Text c="white" fw={700} fz={matches2 ? "64px" : "40px"}>
                 Quality car service
               </Text>
-              <Text
-                c="white"
-                fw={700}
-                fz={matches2 ? "64px" : "40px"}
-               
-              >
+              <Text c="white" fw={700} fz={matches2 ? "64px" : "40px"}>
                 you can trust.
               </Text>
 
@@ -104,7 +94,6 @@ export default function Home() {
                 padding: "4rem 2rem",
               }}
             >
-
               <Group justify="space-between">
                 {/* Left Column - Main Content */}
                 <div style={{ paddingTop: "2rem" }}>
@@ -236,7 +225,8 @@ export default function Home() {
                           marginBottom: "0.5rem",
                         }}
                       >
-                        {stat.number}<sup style={{ fontSize: "2rem" }}>{stat.sup}</sup>
+                        {stat.number}
+                        <sup style={{ fontSize: "2rem" }}>{stat.sup}</sup>
                       </div>
                       <div
                         style={{
@@ -254,7 +244,6 @@ export default function Home() {
                           height: "1px",
                           backgroundColor: "white",
                           width: "100%",
-
                         }}
                       />
                     </div>
@@ -484,7 +473,10 @@ export default function Home() {
           />
         </Container>
       </div>
-      <div id="about" className="bg-[url(/images/beautiful-car.jpg)] bg-cover bg-no-repeat bg-center relative">
+      <div
+        id="about"
+        className="bg-[url(/images/beautiful-car.jpg)] bg-cover bg-no-repeat bg-center relative"
+      >
         {/* Black opacity tint overlay */}
         <div
           style={{
@@ -537,8 +529,7 @@ export default function Home() {
           </Button>
         </Center>
       </div>
-      <div id="contact" >
-
+      <div id="contact">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.02429279651!2d39.223670475932614!3d-6.766892093229869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4f002aeba2ed%3A0x402317c5e273ad1d!2sUrbanSkoon!5e0!3m2!1sen!2stz!4v1755955025183!5m2!1sen!2stz"
           width="100%"
