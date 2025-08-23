@@ -1,9 +1,7 @@
-import type { Metadata } from "next";
-import "./globals.css";
 import { createTheme, mantineHtmlProps, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
-import FooterLinks from "../components/FooterLinks";
-import { HeaderMenu } from "@/components/HeaderMenu";
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Mokko",
@@ -41,10 +39,9 @@ export default function RootLayout({
       </head>
       <body>
         <MantineProvider theme={theme}>
-          <HeaderMenu />
-          {children}
-          <FooterLinks />
           {/* <HeaderMenu /> */}
+          {children}
+          {/* <FooterLinks /> */}
         </MantineProvider>
       </body>
     </html>
