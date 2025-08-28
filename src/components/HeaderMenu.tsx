@@ -12,6 +12,7 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 export function HeaderMenu() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
@@ -31,15 +32,15 @@ export function HeaderMenu() {
           <Link href="/" >
             <Group>
 
-              {/* <Image
-                src="/mokko.svg"
+              <Image
+                src="/logo.svg"
                 alt="Logo"
                 width={54}
                 height={54}
-                style={{ width: "auto", height: "54px" }}
-              /> */}
-              <Text c="white" fw={700} fz={"32px"} style={{
-              }}>UrbanSkoon</Text>
+                style={{ width: "auto", height: "28px" }}
+              />
+              {/* <Text c="white" fw={700} fz={"32px"} style={{
+              }}>UrbanSkoon</Text> */}
             </Group>
           </Link>
 
@@ -80,23 +81,21 @@ export function HeaderMenu() {
         onClose={closeDrawer}
         size="100%"
         padding="md"
-        title={<Link href="/" >
+        title={<Link href="/" 
+        onClick={closeDrawer}>
           <Group>
-
-            
-              {/* <Image
-                src="/mokko.svg"
-                alt="Logo"
-                width={54}
-                height={54}
-                style={{ width: "auto", height: "54px" }}
-              /> */}
-              <Text c="black" fw={700} fz={"32px"} style={{
-              }}>UrbanSkoon</Text>
+            <Image
+              src="/logo_black.svg"
+              alt="Logo"
+              width={54}
+              height={54}
+              style={{ width: "auto", height: "28px" }}
+            />
+              {/* <Text c="black" fw={700} fz={"32px"} style={{
+              }}>UrbanSkoon</Text> */}
           </Group>
         </Link>}
         hiddenFrom="sm"
-        // zIndex={1000000}
       >
         <ScrollArea h="calc(100vh - 80px)" mx="-md">
           <Divider my="0" />
@@ -106,9 +105,7 @@ export function HeaderMenu() {
               href={link.href}
               onClick={closeDrawer}
               className={`block font-medium text-[16px] text-[#1A191E] px-4 py-3 rounded transition-colors `}
-              style={{
-                // background: pathname === link.href ? "#F8F8F8" : undefined,
-              }}
+             
             >
               {link.label}
             </a>
