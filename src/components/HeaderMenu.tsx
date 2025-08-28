@@ -7,7 +7,6 @@ import {
   Drawer,
   Group,
   ScrollArea,
-  Text
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import Link from "next/link";
